@@ -1,0 +1,4 @@
+20180912 	- created main folder structure
+			- installed create-react-app in frontend folder
+20180913	- confirmed that both frontend and backend are able to start
+			- connected backend to a database

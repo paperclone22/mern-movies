@@ -1,0 +1,1 @@
+use "concurrently" to run client and server at same time.

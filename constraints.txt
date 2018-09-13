@@ -1,0 +1,65 @@
+
+MERN Assessment
+
+This assessment will be based on the MERN technology stack ( Mongo, Express, React, Node.js)
+The assessment consists on a CRUD (Create, Read, Update and Delete) application using Express as the backend and React as the front end.
+
+Movies:
+You will be creating an application to create a list of movies containing Title, Description and the date it was released.
+
+Backend:
+You will have to create the express api from scratch, no generators. This api will be acquiring and posting data to a MongoDb database.
+
+Database:
+To connect the express application to the database you can use one of the multiple connectors, you can use the Mongo connector or Mongoose.
+
+Front end:
+For the React application you can use create-react-app to start the application, once it is created you can start adding new components as required.
+
+
+Requirements:
+Clean code!
+Good practices.
+Good structure (multiple files).
+Use of Stateful and Stateless components.
+Use of schemas.
+
+
+Delivering and structure:
+
+Create a Folder called movies, inside of it you will create another 2 folders, backend and front end.
+This Folder should look like this:
+
+-Movies
+  -Backend
+     -Express
+     -Application
+     -Files
+  -Frontend
+     -React
+     -Application
+     -Files
+
+The application will be hosted on your personal Github account, everytime you need to push something add me as a reviewer.
+
+Optional Extras:
+Use of routing.
+Sass.
+Store management.
+Bootstrap.
+ES6.
+
+Resources:
+https://github.com/srinuhamps/ShareAuto/tree/Excercises-for-MEAN by Srinivas Reddy Katta
+https://github.com/danymar24/mean-class by Daniel Rdz
+
+https://reactjs.org/tutorial/tutorial.html
+https://docs.microsoft.com/en-us/azure/cosmos-db/tutorial-develop-mongodb-react
+https://books.goalkicker.com/NodeJSBook/
+https://www.openmymind.net/mongodb.pdf
+
+https://survivejs.com/react/introduction/
+http://exploringjs.com/es6/
+http://github.com/visionmedia/masteringnode/raw/master/book.pdf
+https://mva.microsoft.com/en-us/training-courses/mean-stack-jump-start-8442?l=eovSb3Vz_4604984382
+https://blog.hellojs.org/fetching-api-data-with-react-js-460fe8bbf8f2

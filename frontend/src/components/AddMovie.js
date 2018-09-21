@@ -18,12 +18,12 @@ class AddMovie extends Component {
         release_date: ''
     }
 
-    onChange = e => {
-        this.setState({ [e.target.name]: [e.target.value]});
+    onChange = event => {
+        this.setState({ [event.target.name]: [event.target.value]});
     }
 
-    onSubmit = e => {
-        e.preventDefault();
+    onSubmit = event => {
+        event.preventDefault();
         const newMovie = {
             title: this.state.title,
             description: this.state.description,

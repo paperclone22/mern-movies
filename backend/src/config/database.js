@@ -1,6 +1,6 @@
 module.exports = {
-    mongoURI: 'mongodb://localhost:27017/movies'
-    //database: 'mongodb://localhost:27017/movies',
+    //mongoURI: 'mongodb://localhost:27017/movies'
+    database: 'mongodb://localhost:27017/movies'// ,
     //secret: 'be-mern'
 }
 

@@ -4,8 +4,14 @@
   "description": "an application for managing movies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "npm start --prefix backend",
+    "frontend": "npm start --prefix frontend",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "author": "Shannon Massey",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
 }

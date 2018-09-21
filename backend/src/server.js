@@ -3,11 +3,14 @@ const Mongoose = require('mongoose');
 const BodyParser = require('body-parser');
 const db = require('./config/database');
 const movies = require('./routes/movies');
+const Cors = require('cors');
 
 const app = Express();
 
 // Middleware
 app.use(BodyParser.json());
+
+app.use(Cors({origin: true}));
 
 Mongoose.connect(db.database, { useNewUrlParser: true })
     .then(() => console.log('MongoDB Connected...'))

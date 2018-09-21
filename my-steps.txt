@@ -2,3 +2,7 @@
 			- installed create-react-app in frontend folder
 20180913	- confirmed that both frontend and backend are able to start
 			- connected backend to a database
+			- created a Movie schema
+20180914	- created CRUD methods: GET, POST, DELETE
+			- used concurrently to run backend and frontend at the same time
+20180919	- connected fronend to backend. Get all movies

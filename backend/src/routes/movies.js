@@ -7,7 +7,7 @@ const Movie = require('../models/movie');
  * @route GET /movies
  * @desc Get all movies
  */
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
     Movie.find().then(movies => res.json(movies))
         // .sort({ title: 1 }) // sort by title acending order
 });
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
  * @route POST /movies
  * @desc create a movies
  */
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
     const newMovie = new Movie({
         title: req.body.title,
         description: req.body.description,
@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
  * @route delete /movies/:id
  * @desc delete a movies
  */
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res, next) => {
     Movie.findById(req.params.id)
         .then(movie => movie.remove().then(() => res.json({success: true})))
         .catch(err => res.status(404).json({success: false}));

@@ -19,7 +19,7 @@ Mongoose.connect(db.database, { useNewUrlParser: true })
 app.use('/movies', movies);
 
 app.get('/', (req, res) => {
-    res.send("Invalid Endpoint");
+    res.redirect('/movies/');
 })
 
 

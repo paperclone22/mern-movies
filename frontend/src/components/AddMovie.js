@@ -4,10 +4,12 @@ import {
     Form,
     FormGroup,
     Label,
-    Input
+    Input,
+    Col,
+    Row,
+    Container
 } from 'reactstrap';
 import axios from 'axios';
-import MovieList from './MovieList';
 
 const proxy = require('../../package.json').proxy;
 
@@ -31,7 +33,7 @@ class AddMovie extends Component {
         }
         axios.post(proxy+'/movies/', newMovie)
         .then( res => {
-            console.log(res);
+            // console.log(res);
             window.location.reload();
         })
     }
@@ -41,13 +43,19 @@ class AddMovie extends Component {
             <div>
                 <Form onSubmit={this.onSubmit}>
                     <FormGroup>
-                        <Label for='movie'>Movie</Label>
-                        <Input type='text' name='title' placeholder='title' onChange={this.onChange}></Input>
-                        <Input type='text' name='description' placeholder='description' onChange={this.onChange}></Input>
-                        <Input type='text' name='release_date' placeholder='release date' onChange={this.onChange}></Input>
-                        <Button color="dark" onSubmit={ this.onSubmit }>
-                            Add Movie
-                        </Button>
+                        <Container>
+                            <Row>
+                                <Col sm="12" md={{ size: 8, offset: 2 }}>
+                                    <Label for='movie'>Movie</Label>
+                                    <Input type='text' name='title' placeholder='title' onChange={this.onChange}></Input>
+                                    <Input type='text' name='description' placeholder='description' onChange={this.onChange}></Input>
+                                    <Input type='text' name='release_date' placeholder='release date' onChange={this.onChange}></Input>
+                                    <Button color="dark" onSubmit={ this.onSubmit }>
+                                        Add Movie
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Container>
                     </FormGroup>
                 </Form>
             </div>

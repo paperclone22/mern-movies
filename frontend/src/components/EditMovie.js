@@ -32,12 +32,15 @@ class EditMovie extends Component {
             description: this.state.description,
             release_date: this.state.release_date
         }
-        console.log('newMovie: '+newMovie);
-        axios.put(proxy+'/movies/', newMovie)
-        .then( res => {
-            console.log(res);
-            window.location.reload();
-        })
+        if(newMovie.title !== ''){
+            axios.put(proxy+'/movies/', newMovie)
+            .then( res => {
+                console.log(res);
+                window.location.reload();
+            })
+        } else {
+            // there's no indication that something went wrong ( empty title )
+        }
     }
 
     render() {

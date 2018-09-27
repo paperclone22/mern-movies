@@ -31,11 +31,18 @@ class AddMovie extends Component {
             description: this.state.description,
             release_date: this.state.release_date
         }
-        axios.post(proxy+'/movies/', newMovie)
-        .then( res => {
-            // console.log(res);
-            window.location.reload();
-        })
+        if(newMovie.title !== '') {
+            axios.post(proxy+'/movies/', newMovie)
+            .then( res => {
+                // console.log(res);
+                window.location.reload();
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        } else {
+            // there's no indication that something went wrong ( empty title )
+        }
     }
 
     render() {

@@ -12,7 +12,6 @@ class EditMovieButton extends Component {
         this.setState({
             isHidden: !this.state.isHidden
         })
-        // console.log(this.props.movie);
     }
 
     render() {

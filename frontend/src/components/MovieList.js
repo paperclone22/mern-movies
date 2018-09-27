@@ -7,10 +7,6 @@ import EditMovieButton from './EditMovieButton';
 const proxy = require('../../package.json').proxy;
 
 class MovieList extends Component {
-    // constructor(props){
-    //     super(props);
-    //     // console.log( 'proxy: '+proxy+'/movies/');
-    // }
 
     state = {
        movies: []
@@ -19,7 +15,6 @@ class MovieList extends Component {
     componentDidMount() {
         axios.get(proxy+'/movies/')
         .then( res => {
-            // console.log(res);
             this.setState({movies: res.data});
         })
     }
@@ -27,32 +22,34 @@ class MovieList extends Component {
     render() {
         return (
             <Container>
-                <ListGroup>
-                    {
-                        this.state.movies.map(movie =>
-                        <ListGroupItem key={movie._id}>
-                            <Row>
-                                <Col xs='1'>
-                                    <DeleteMovie movieID={movie._id}></DeleteMovie>
-                                </Col>
-                                <Col>
-                                    <Row>
-                                        <b>{movie.title}</b>
-                                    </Row>
-                                    <Row>
-                                        {movie.description}
-                                    </Row>
-                                    <Row>
-                                        {movie.release_date}
-                                    </Row>
-                                </Col>
-                                <Col>
-                                    <EditMovieButton movie={movie}></EditMovieButton>
-                                </Col>
-                            </Row>
-                        </ListGroupItem>)
-                    }
-                </ListGroup>
+                <Col xs='12' md={{size: 10, offset: 1}}>
+                    <ListGroup>
+                        {
+                            this.state.movies.map(movie =>
+                            <ListGroupItem key={movie._id}>
+                                <Row>
+                                    <Col xs='1'>
+                                        <DeleteMovie movieID={movie._id}></DeleteMovie>
+                                    </Col>
+                                    <Col xs={{ size: 3, offset: 1}}>
+                                        <Row>
+                                            <b>{movie.title}</b>
+                                        </Row>
+                                        <Row>
+                                            {movie.description}
+                                        </Row>
+                                        <Row>
+                                            {movie.release_date}
+                                        </Row>
+                                    </Col>
+                                    <Col xs={{ size: 6 }}>
+                                        <EditMovieButton movie={movie}></EditMovieButton>
+                                    </Col>
+                                </Row>
+                            </ListGroupItem>)
+                        }
+                    </ListGroup>
+                </Col>
             </Container>
         );
     }

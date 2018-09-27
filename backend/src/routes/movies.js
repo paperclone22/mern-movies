@@ -9,12 +9,11 @@ const Movie = require('../models/movie');
  */
 router.get('/', (req, res) => {
     Movie.find().then(movies => res.json(movies))
-        // .sort({ title: 1 }) // sort by title acending order
 });
 
 /**
  * @route POST /movies
- * @desc create a movies
+ * @desc create a movie
  */
 router.post('/', (req, res) => {
     const newMovie = new Movie({
@@ -35,8 +34,10 @@ router.delete('/:id', (req, res) => {
         .catch(err => res.status(404).json({success: false}));
 });
 
-// TODO: an UPDATE method ( PUT )
-
+/**
+ * @route PUT /movies/
+ * @desc update an existing movie
+ */
 router.put('/', (req, res) => {
     console.log(req.body);
     const newMovie = new Movie({

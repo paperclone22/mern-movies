@@ -8,3 +8,4 @@
 20180919	- connected fronend to backend. Get all movies
 20180920	- AddMovie adds movies from frontend
 20180925	- Delete Button works on frontend
+20180926	- added PUT. all basic crud is done

@@ -1,7 +1,6 @@
 module.exports = {
-    //mongoURI: 'mongodb://localhost:27017/movies'
-    database: 'mongodb://localhost:27017/movies'// ,
-    //secret: 'be-mern'
+    mongoURI: 'mongodb://shannon:mojo2jojo@ds115753.mlab.com:15753/movies', // use this for online databases
+    database: 'mongodb://localhost:27017/movies'    // use this for localhost
 }
 
 /** use either:
@@ -10,7 +9,7 @@ module.exports = {
  *
  * OR
  *
- * database and secret
+ * database
  *
  * not both
  *

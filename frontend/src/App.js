@@ -4,20 +4,15 @@ import './App.css';
 import MyNavbar from './components/myNavbar';
 import MovieList from './components/MovieList';
 import AddMovie from './components/AddMovie';
-import {
-  Container
-} from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container>
         <MyNavbar></MyNavbar>
-          <AddMovie></AddMovie>
-          <br></br>
-          <MovieList></MovieList>
-        </Container>
+        <AddMovie></AddMovie>
+        <br></br>
+        <MovieList></MovieList>
       </div>
     );
   }
